@@ -9,4 +9,6 @@ function fzf_alias() {
 }
 
 zle -N fzf_alias
-bindkey '\ea' fzf_alias
+bindkey -M emacs '\ea' fzf_alias
+bindkey -M vicmd '\ea' fzf_alias
+bindkey -M viins '\ea' fzf_alias
