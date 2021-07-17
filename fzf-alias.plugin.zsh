@@ -2,8 +2,8 @@
 
 function fzf_alias() {
     local selection
-    if selection=$(alias | fzf | sed -re 's/=.+$/ /'); then
-        LBUFFER=$selection
+    if selection=$(alias | fzf --query="$BUFFER" | sed -re 's/=.+$/ /'); then
+        BUFFER=$selection
     fi
     zle redisplay
 }
