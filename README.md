@@ -15,7 +15,7 @@ You will need [fzf](https://github.com/junegunn/fzf).
 #### `ohmyzsh`
 
 1. `cd ~/.oh-my-zsh/custom/plugins`
-2. `git clone git@github.com:thirteen37/fzf-alias.git fzf-brew`
+2. `git clone git@github.com:thirteen37/fzf-alias.git fzf-alias`
 3. Add `fzf-alias` to your `.zshrc` plugin list `plugins=(... fzf-alias)`
 
 #### `zgen` or `zgenom`
