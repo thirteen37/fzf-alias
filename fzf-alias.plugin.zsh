@@ -2,7 +2,8 @@
 
 function fzf_alias() {
     local selection
-    if selection=$(alias | fzf --query="$BUFFER" | sed -re 's/=.+$/ /'); then
+    # use sed with column to work around MacOS/BSD column not having a -l option
+    if selection=$(alias | sed 's/=/\t/' | column -s '	' -t | fzf --query="$BUFFER" | awk '{ print $1 }'); then
         BUFFER=$selection
     fi
     zle redisplay
