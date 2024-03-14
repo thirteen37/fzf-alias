@@ -11,6 +11,7 @@ function fzf_alias() {
                        FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS $FZF_ALIAS_OPTS" fzf --preview "echo {2..}" --query="$BUFFER" |
                        awk '{ print $1 }'); then
         BUFFER=$selection
+        CURSOR=$#BUFFER
     fi
     zle redisplay
 }
